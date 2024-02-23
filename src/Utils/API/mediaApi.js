@@ -4,7 +4,7 @@ export const postNews = async (data) => {
   //newsTitle description image
 
   const response = await axios.post(
-    "http://localhost:5001/media/postNews",
+    "https://geez-bank-p2od.onrender.com/media/postNews",
     data,
     {
       headers: {
@@ -22,9 +22,9 @@ export const postNews = async (data) => {
 };
 export const postExecutive = async (data) => {
   //FullName Position image
-console.log(data);
+
   const response = await axios.post(
-    "http://localhost:5001/media/postExecutive",
+    "https://geez-bank-p2od.onrender.com/media/postExecutive",
     data,
     {
       headers: {
@@ -44,7 +44,7 @@ export const postBoard = async (data) => {
   //FullName Position image
 
   const response = await axios.post(
-    "http://localhost:5001/media/postBoard",
+    "https://geez-bank-p2od.onrender.com/media/postBoard",
     data,
     {
       headers: {
@@ -66,7 +66,7 @@ export const postPartners = async (data) => {
   // image
 
   const response = await axios.post(
-    "http://localhost:5001/media/postPartners",
+    "https://geez-bank-p2od.onrender.com/media/postPartners",
     data,
     {
       headers: {
@@ -88,7 +88,7 @@ export const postPhotos = async (data) => {
   // image
 
   const response = await axios.post(
-    "http://localhost:5001/media/postPhotos",
+    "https://geez-bank-p2od.onrender.com/media/postPhotos",
     data,
     {
       headers: {
@@ -110,7 +110,7 @@ export const postHero = async (data) => {
   // image
 
   const response = await axios.post(
-    "http://localhost:5001/media/postHero",
+    "https://geez-bank-p2od.onrender.com/media/postHero",
     data,
     {
       headers: {
@@ -131,7 +131,7 @@ export const postReport = async (data) => {
   //ReportName
   // report
   const response = await axios.post(
-    "http://localhost:5001/media/postReport",
+    "https://geez-bank-p2od.onrender.com/media/postReport",
     data,
     {
       headers: {
@@ -153,7 +153,7 @@ export const postDocument = async (data) => {
   // document
 
   const response = await axios.post(
-    "http://localhost:5001/media/postDocument",
+    "https://geez-bank-p2od.onrender.com/media/postDocument",
     data,
     {
       headers: {
@@ -174,7 +174,7 @@ export const postTender = async (data) => {
   // tenderTitle,description
 
   const response = await axios.post(
-    "http://localhost:5001/media/postTender",
+    "https://geez-bank-p2od.onrender.com/media/postTender",
     data,
     {
       headers: {
@@ -211,7 +211,7 @@ export const createVacancy = async (data) => {
   // DeadLine
   console.log(data);
   const response = await axios.post(
-    "http://localhost:5001/media/Createvacancies",
+    "https://geez-bank-p2od.onrender.com/media/Createvacancies",
     data,
     {
       headers: {
@@ -239,7 +239,7 @@ export const updateVacancyById = async (data) => {
   // Salary,
   // DeadLine,
   const response = await axios.post(
-    "http://localhost:5001/media/updateVacancies",
+    "https://geez-bank-p2od.onrender.com/media/updateVacancies",
     data,
     {
       headers: {
@@ -260,7 +260,7 @@ export const updateVacancyById = async (data) => {
 export const deleteVacancyById = async (data) => {
   // _id
   const response = await axios.post(
-    "http://localhost:5001/media/deleteVacancies",
+    "https://geez-bank-p2od.onrender.com/media/deleteVacancies",
     data,
     {
       headers: {
@@ -280,7 +280,7 @@ export const deleteVacancyById = async (data) => {
 // Get all vacancies
 export const getAllVacancies = async () => {
   const response = await axios.get(
-    "http://localhost:5001/media/getAllVacancies"
+    "https://geez-bank-p2od.onrender.com/media/getAllVacancies"
   );
 
   if (response.status === 200) {
@@ -296,7 +296,7 @@ export const getAllVacancies = async () => {
 export const updateNewsById = async (data) => {
   // _id,newsTitle,description
   const response = await axios.post(
-    "http://localhost:5001/media/updateNews",
+    "https://geez-bank-p2od.onrender.com/media/updateNews",
     data,
     {
       headers: {
@@ -317,7 +317,7 @@ export const updateNewsById = async (data) => {
 export const deleteNewsById = async (data) => {
   //_id
   const response = await axios.post(
-    "http://localhost:5001/media/deleteNews",
+    "https://geez-bank-p2od.onrender.com/media/deleteNews",
     data,
     {
       headers: {
@@ -337,7 +337,7 @@ export const deleteNewsById = async (data) => {
 export const deleteExecutiveById = async (data) => {
   //_id
   const response = await axios.post(
-    "http://localhost:5001/media/deleteExecutive",
+    "https://geez-bank-p2od.onrender.com/media/deleteExecutive",
     data,
     {
       headers: {
@@ -356,7 +356,7 @@ export const deleteExecutiveById = async (data) => {
 export const deleteBoardById = async (data) => {
   //_id
   const response = await axios.post(
-    "http://localhost:5001/media/deleteBoard",
+    "https://geez-bank-p2od.onrender.com/media/deleteBoard",
     data,
     {
       headers: {
@@ -377,7 +377,7 @@ export const deleteBoardById = async (data) => {
 export const updateBoardById = async (data) => {
   //_id, FullName Position
   const response = await axios.post(
-    "http://localhost:5001/media/updateBoard",
+    "https://geez-bank-p2od.onrender.com/media/updateBoard",
     data,
     {
       headers: {
@@ -399,7 +399,7 @@ export const updateBoardById = async (data) => {
 export const updateExecutiveById = async (data) => {
   //_id,FullName Position
   const response = await axios.post(
-    "http://localhost:5001/media/updateExecutive",
+    "https://geez-bank-p2od.onrender.com/media/updateExecutive",
     data,
     {
       headers: {
@@ -421,7 +421,7 @@ export const updateExecutiveById = async (data) => {
 export const updatePartnerById = async (data) => {
   //_id,partnername
   const response = await axios.post(
-    "http://localhost:5001/media/updatePartner",
+    "https://geez-bank-p2od.onrender.com/media/updatePartner",
     data,
     {
       headers: {
@@ -442,7 +442,7 @@ export const updatePartnerById = async (data) => {
 export const deletePartnerById = async (data) => {
   //_id
   const response = await axios.post(
-    "http://localhost:5001/media/deletePartner",
+    "https://geez-bank-p2od.onrender.com/media/deletePartner",
     data,
     {
       headers: {
@@ -463,7 +463,7 @@ export const deletePartnerById = async (data) => {
 export const updateGalleryById = async (data) => {
   //_id,imagename
   const response = await axios.post(
-    "http://localhost:5001/media/updateGallery",
+    "https://geez-bank-p2od.onrender.com/media/updateGallery",
     data,
     {
       headers: {
@@ -485,7 +485,7 @@ export const deleteGalleryById = async (data) => {
   // _id
   console.log(data);
   const response = await axios.post(
-    "http://localhost:5001/media/deleteGallery",
+    "https://geez-bank-p2od.onrender.com/media/deleteGallery",
     data,
     {
       headers: {
@@ -506,7 +506,7 @@ export const deleteGalleryById = async (data) => {
 export const updateHeroById = async (data) => {
   // _id,ImageName
   const response = await axios.post(
-    "http://localhost:5001/media/updateHero",
+    "https://geez-bank-p2od.onrender.com/media/updateHero",
     data,
     {
       headers: {
@@ -527,7 +527,7 @@ export const updateHeroById = async (data) => {
 export const deleteHeroById = async (data) => {
   // _id
   const response = await axios.post(
-    "http://localhost:5001/media/deleteHero",
+    "https://geez-bank-p2od.onrender.com/media/deleteHero",
     data,
     {
       headers: {
@@ -548,7 +548,7 @@ export const deleteHeroById = async (data) => {
 export const updateReportById = async (data) => {
   // _id,reportName
   const response = await axios.post(
-    "http://localhost:5001/media/updateReport",
+    "https://geez-bank-p2od.onrender.com/media/updateReport",
     data,
     {
       headers: {
@@ -569,7 +569,7 @@ export const updateReportById = async (data) => {
 export const deleteReportById = async (data) => {
   // _id
   const response = await axios.post(
-    "http://localhost:5001/media/deleteReport",
+    "https://geez-bank-p2od.onrender.com/media/deleteReport",
     data,
     {
       headers: {
@@ -590,7 +590,7 @@ export const deleteReportById = async (data) => {
 export const updateDocumentById = async (data) => {
   // _id,reportName
   const response = await axios.post(
-    "http://localhost:5001/media/updateDocument",
+    "https://geez-bank-p2od.onrender.com/media/updateDocument",
     data,
     {
       headers: {
@@ -611,7 +611,7 @@ export const updateDocumentById = async (data) => {
 export const deleteDocumentById = async (data) => {
   // _id
   const response = await axios.post(
-    "http://localhost:5001/media/deleteDocument",
+    "https://geez-bank-p2od.onrender.com/media/deleteDocument",
     data,
     {
       headers: {
@@ -632,7 +632,7 @@ export const deleteDocumentById = async (data) => {
 export const updateTenderById = async (data) => {
   // _id,tenderTitle, description
   const response = await axios.post(
-    "http://localhost:5001/media/updateTender",
+    "https://geez-bank-p2od.onrender.com/media/updateTender",
     data,
     {
       headers: {
@@ -653,7 +653,7 @@ export const updateTenderById = async (data) => {
 export const deleteTenderById = async (data) => {
   // _id
   const response = await axios.post(
-    "http://localhost:5001/media/deleteTender",
+    "https://geez-bank-p2od.onrender.com/media/deleteTender",
     data,
     {
       headers: {
@@ -673,7 +673,7 @@ export const deleteTenderById = async (data) => {
 // Continue to create functions for other media upload routes as needed
 
 export const getAllNews = async () => {
-  const response = await axios.get("http://localhost:5001/media/getNews");
+  const response = await axios.get("https://geez-bank-p2od.onrender.com/media/getNews");
 
   if (response.status === 200) {
     return response.data;
@@ -682,7 +682,7 @@ export const getAllNews = async () => {
   }
 };
 export const getAllBoard = async () => {
-  const response = await axios.get("http://localhost:5001/media/getBoard");
+  const response = await axios.get("https://geez-bank-p2od.onrender.com/media/getBoard");
 
   if (response.status === 200) {
     return response.data;
@@ -691,7 +691,7 @@ export const getAllBoard = async () => {
   }
 };
 export const getAllExecutive = async () => {
-  const response = await axios.get("http://localhost:5001/media/getExecutive");
+  const response = await axios.get("https://geez-bank-p2od.onrender.com/media/getExecutive");
 
   if (response.status === 200) {
     return response.data;
@@ -702,7 +702,7 @@ export const getAllExecutive = async () => {
 
 
 export const getAllPartners = async () => {
-  const response = await axios.get("http://localhost:5001/media/getPartners");
+  const response = await axios.get("https://geez-bank-p2od.onrender.com/media/getPartners");
 
   if (response.status === 200) {
     return response.data;
@@ -712,7 +712,7 @@ export const getAllPartners = async () => {
 };
 
 export const getAllGallery = async () => {
-  const response = await axios.get("http://localhost:5001/media/getGallery");
+  const response = await axios.get("https://geez-bank-p2od.onrender.com/media/getGallery");
 
   if (response.status === 200) {
     return response.data;
@@ -722,7 +722,7 @@ export const getAllGallery = async () => {
 };
 
 export const getAllHero = async () => {
-  const response = await axios.get("http://localhost:5001/media/getHero");
+  const response = await axios.get("https://geez-bank-p2od.onrender.com/media/getHero");
 
   if (response.status === 200) {
     return response.data;
@@ -732,7 +732,7 @@ export const getAllHero = async () => {
 };
 
 export const getAllLegal = async () => {
-  const response = await axios.get("http://localhost:5001/media/getDocument");
+  const response = await axios.get("https://geez-bank-p2od.onrender.com/media/getDocument");
 
   if (response.status === 200) {
     return response.data;
@@ -741,7 +741,7 @@ export const getAllLegal = async () => {
   }
 };
 export const getAllReport = async () => {
-  const response = await axios.get("http://localhost:5001/media/getReport");
+  const response = await axios.get("https://geez-bank-p2od.onrender.com/media/getReport");
 
   if (response.status === 200) {
     return response.data;
@@ -751,7 +751,7 @@ export const getAllReport = async () => {
 };
 
 export const getAlltender = async () => {
-  const response = await axios.get("http://localhost:5001/media/getTender");
+  const response = await axios.get("https://geez-bank-p2od.onrender.com/media/getTender");
 
   if (response.status === 200) {
     return response.data;

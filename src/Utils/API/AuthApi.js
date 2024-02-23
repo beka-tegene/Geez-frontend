@@ -5,7 +5,7 @@ import Cookies from "js-cookie";
 
 export const SignUp = async (data) => {
   // email, password
-  const useData = await axios.post("http://localhost:5001/auth/signup", data, {
+  const useData = await axios.post("https://geez-bank-p2od.onrender.com/auth/signup", data, {
     headers: {
       "Content-Type": "application/json",
     },
@@ -23,7 +23,7 @@ export const Login = async (data) => {
     console.log(data);
     //email, password
     const response = await axios.post(
-      "http://localhost:5001/auth/login",
+      "https://geez-bank-p2od.onrender.com/auth/login",
       data,
       {
         headers: {
@@ -58,7 +58,7 @@ export const Login = async (data) => {
 export const forgotPassword = async (data) => {
   // email
   const useData = await axios.post(
-    "http://localhost:5001/auth/forgotPassword",
+    "https://geez-bank-p2od.onrender.com/auth/forgotPassword",
     data,
     {
       headers: {
@@ -76,7 +76,7 @@ export const forgotPassword = async (data) => {
 
 export const resetpassword = async (data) => {
   // newPassword, email
-  const useData = await axios.post("http://localhost:5001/auth/reset", data, {
+  const useData = await axios.post("https://geez-bank-p2od.onrender.com/auth/reset", data, {
     headers: {
       "Content-Type": "application/json",
     },

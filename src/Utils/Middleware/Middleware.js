@@ -29,6 +29,7 @@ import {
   deletePartnerById,
   deleteReportById,
   deleteTenderById,
+  deleteVacancyById,
   getAllBoard,
   getAllExecutive,
   getAllGallery,
@@ -77,6 +78,7 @@ import {
   setDeletePartnerData,
   setDeleteReportData,
   setDeleteTenderData,
+  setDeleteVacancyData,
   setEditBoardData,
   setEditExecutiveData,
   setEditNewsData,
@@ -133,6 +135,8 @@ export function* watchFetchGeez() {
   yield takeLatest("media/setDeleteLegal", fetchSetDeleteLegal);
   yield takeLatest("media/setDeleteTender", fetchSetDeleteTender);
   yield takeLatest("media/setDeletePartner", fetchSetDeletePartner);
+  yield takeLatest("media/setDeleteVacancy", fetchSetDeleteVacancy);
+
 
   yield takeLatest("media/setEditNews", fetchSetEditNews);
   yield takeLatest("media/setEditPublication", fetchSetEditDocument);
@@ -325,6 +329,15 @@ function* fetchSetDeleteNews(action) {
   try {
     yield call(deleteNewsById, action.payload.data);
     yield setDeleteNewsData();
+  } catch (error) {
+    toast.error(error.response.data.msg);
+    console.error("Saga Error:", error);
+  }
+}
+function* fetchSetDeleteVacancy(action) {
+  try {
+    yield call(deleteVacancyById, action.payload.data);
+    yield setDeleteVacancyData();
   } catch (error) {
     toast.error(error.response.data.msg);
     console.error("Saga Error:", error);

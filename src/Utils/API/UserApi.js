@@ -14,7 +14,7 @@ export const PersonalInfo = async (data) => {
   // Current_Address
   // Total_Working_Experience
   // Current_Gross_Salary
-  const useData = await axios.post("http://localhost:5001/user/pi", data, {
+  const useData = await axios.post("https://geez-bank-p2od.onrender.com/user/pi", data, {
     headers: {
       "Content-Type": "application/json",
     },
@@ -37,7 +37,7 @@ export const Educational_Status = async (data) => {
   // Attach_Updated_Documents
   // Exit_Exam_Result
   const useData = await axios.post(
-    "http://localhost:5001/user/edustatus",
+    "https://geez-bank-p2od.onrender.com/user/edustatus",
     data,
     {
       headers: {
@@ -60,7 +60,7 @@ export const WorkExperience = async (data) => {
   // From_Date
   // To_Date
   console.log(data);
-  const useData = await axios.post("http://localhost:5001/user/workexp", data, {
+  const useData = await axios.post("https://geez-bank-p2od.onrender.com/user/workexp", data, {
     headers: {
       "Content-Type": "application/json",
     },
@@ -76,7 +76,7 @@ export const WorkExperience = async (data) => {
 export const ApplyVacancy = async (data) => {
   // UserId, VacancyId
   const useData = await axios.post(
-    "http://localhost:5001/user/ApplyVacancy",
+    "https://geez-bank-p2od.onrender.com/user/ApplyVacancy",
     data,
     {
       headers: {
@@ -98,7 +98,7 @@ export const Sendfeedback = async (data) => {
   // subject
   // message
   const useData = await axios.post(
-    "http://localhost:5001/user/Sendfeedback",
+    "https://geez-bank-p2od.onrender.com/user/Sendfeedback",
     data,
     {
       headers: {

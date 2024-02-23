@@ -28,6 +28,7 @@ const initialState = {
   InputDeleteNews: [],
   InputDeleteReport: [],
   InputDeleteLegal: [],
+  InputDeleteVacancy:[],
   InputDeleteTender: [],
   InputDeletePartner: [],
   InputDeleteBoard: [],
@@ -177,6 +178,13 @@ const MediaStore = createSlice({
     setDeleteLegal(state, action) {
       const newData = action.payload;
       state.InputDeleteLegal.push({
+        _id: newData._id,
+      });
+    },
+    setDeleteVacancyData(state) {},
+    setDeleteVacancy(state, action) {
+      const newData = action.payload;
+      state.InputDeleteVacancy.push({
         _id: newData._id,
       });
     },
@@ -381,6 +389,8 @@ export const {
   setDeleteReport,
   setDeleteLegalData,
   setDeleteLegal,
+  setDeleteVacancyData,
+  setDeleteVacancy,
   setDeleteTenderData,
   setDeleteTender,
   setDeletePartnerData,

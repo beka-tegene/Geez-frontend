@@ -9,7 +9,10 @@ import {
   Divider,
   IconButton,
   Stack,
-  Typography,
+  Typography,Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions,
 } from "@mui/material";
 import {
   Add,
@@ -22,7 +25,7 @@ import {
 import parse from "html-react-parser";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { getVacancyData } from "../../../Utils/Store/MediaStore";
+import { getVacancyData, setDeleteVacancy } from "../../../Utils/Store/MediaStore";
 const VacancyManagement = () => {
   const [expanded, setExpanded] = useState(false);
   const dispatch = useDispatch();
@@ -34,7 +37,16 @@ const VacancyManagement = () => {
   useEffect(() => {
     dispatch(getVacancyData());
   }, [dispatch]);
-
+  const [deleteConfirmationOpen, setDeleteConfirmationOpen] = useState(false);
+  const [deleteItemId, setDeleteItemId] = useState(null);
+  const deleteHandler = (_id) => {
+    setDeleteItemId(_id);
+    setDeleteConfirmationOpen(true);
+  };
+  const handleDeleteConfirmation = () => {
+    dispatch(setDeleteVacancy({ data: { _id: deleteItemId } }));
+    setDeleteConfirmationOpen(false);
+  };
   return (
     <Stack p={2} gap={2}>
       <Stack
@@ -101,6 +113,7 @@ const VacancyManagement = () => {
                   background: "red",
                   "&:hover": { color: "black" },
                 }}
+                onClick={() => deleteHandler(item._id)}
               >
                 <Delete />
               </IconButton>
@@ -208,6 +221,27 @@ const VacancyManagement = () => {
           </Card>
         ))}
       </Stack>
+      <Dialog
+        open={deleteConfirmationOpen}
+        onClose={() => setDeleteConfirmationOpen(false)}
+        aria-labelledby="delete-confirmation-dialog"
+      >
+        <DialogTitle>Confirm Deletion</DialogTitle>
+        <DialogContent>
+          Are you sure you want to delete this News?
+        </DialogContent>
+        <DialogActions>
+          <Button
+            onClick={() => setDeleteConfirmationOpen(false)}
+            color="primary"
+          >
+            No
+          </Button>
+          <Button onClick={handleDeleteConfirmation} color="error">
+            Yes
+          </Button>
+        </DialogActions>
+      </Dialog>
     </Stack>
   );
 };
